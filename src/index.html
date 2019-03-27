@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Social Network</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" media="screen" href="style.css">
+
+<script src="https://www.gstatic.com/firebasejs/5.9.1/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyCDjKnqcccpzC4EcSwfXQzDbFl0pa8tj0o",
+    authDomain: "social-network-calis.firebaseapp.com",
+    databaseURL: "https://social-network-calis.firebaseio.com",
+    projectId: "social-network-calis",
+    storageBucket: "",
+    messagingSenderId: "86664419590"
+  };
+  firebase.initializeApp(config);
+</script> 
+
+
+</head>
+
+<body>
+	<header>
+		<p>Nombre y logo</p>
+	</header>
+
+<section class="welcomePage">
+	<!-- <img class="welcomeImg" src="../images/welcomeImg.png" alt="dogs & cats welcome"> <br>
+	<button class="logInBtn">Iniciar sesión</button>
+
+	<ul>
+		<li>Publica y encuentra a tus mascotas perdidas</li>
+		<li>Localiza al mejor adoptante</li>
+		<li>Descubre a tu mascota ideal</li>
+	</ul> -->
+<!--</section> -->
+
+<!-- <section class="newUserPage"> -->
+
+
+	<p>Crear cuenta</p>
+	<form>
+		<label>Email:</label><br>
+		<input class="email" type="text"><br>
+		<label>Contraseña:</label><br>
+		<input class="password" type="password"><br>
+		<!--
+		<label>Confirma tu contraseña:</label><br>
+		<input class="confirm newUser" type="password"><br> -->
+
+		<button onclick="register()" class="signInBtn">Registrate</button>
+	</form>
+
+
+</section>
+
+
+<footer>
+	<a href="#" class="aboutUs"><p>¿Quienes somos?</p></a>
+</footer>
+<script src="main.js"></script>
+</body>
+</html>

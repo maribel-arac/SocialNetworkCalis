@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Londrina+Solid');
+
+* {
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+background-image:  url("../images/backgroundImg.png");
+}
+
+header{
+    background-color: #00E1C6;
+    top: 0%;
+    left: 0%;
+    right: 0%;
+    font-size: 3rem;
+    position: relative;
+}
+
+ul {
+    list-style-position: inside;
+}
+footer{
+    background-color: #00E1C6;
+    position: absolute;
+    bottom: 0%;
+    width: 100%;
+    position: fixed;
+}
+
+input[type=text], .newUser {
+    background-color: #9AD3FF;
+    font-size: 1rem;
+}
+
+label {
+    font-size: 1.5rem;
+}
+
+.welcomeImg{
+    height: 12rem;
+    width: 25rem;
+}
+
+.logInBtn {
+    background-color: #D6B534;
+    font-size: 1rem;
+}
