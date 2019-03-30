@@ -4,6 +4,7 @@
 * {
     text-align: center;
     font-family: 'Roboto', sans-serif;
+    margin: 0;
 }
 
 body {
@@ -30,9 +31,10 @@ footer{
     position: fixed;
 }
 
-input[type=text], .newUser {
+input[type=text] {
     background-color: #9AD3FF;
     font-size: 1rem;
+    margin: 0;
 }
 
 label {
@@ -44,7 +46,18 @@ label {
     width: 25rem;
 }
 
-.logInBtn {
-    background-color: #D6B534;
+.logInBtn, .signInBtn, .logOutBtn, .saveBtn{
+    background-color: green;
     font-size: 1rem;
+    color: white;
 }
+
+.logOutBtn{
+    background-color: red;
+}
+
+.saveBtn{
+    background-color: blue;
+}
+
+/* estilo de la tabla */

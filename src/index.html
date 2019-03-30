@@ -1,43 +1,32 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Social Network</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" type="text/css" media="screen" href="style.css">
+ <meta charset="utf-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <title>Page Title</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+   <!-- Bootstrap CSS 
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
 
-<script src="https://www.gstatic.com/firebasejs/5.9.1/firebase.js"></script>
-<script>
-  // Initialize Firebase
-  var config = {
-    apiKey: "AIzaSyCDjKnqcccpzC4EcSwfXQzDbFl0pa8tj0o",
-    authDomain: "social-network-calis.firebaseapp.com",
-    databaseURL: "https://social-network-calis.firebaseio.com",
-    projectId: "social-network-calis",
-    storageBucket: "",
-    messagingSenderId: "86664419590"
-  };
-  firebase.initializeApp(config);
-</script> 
-
-
+  <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
 	<header>
 		<p>Nombre y logo</p>
 	</header>
 
+	<main>
+
+<!-- 
 <section class="welcomePage">
-	<!-- <img class="welcomeImg" src="../images/welcomeImg.png" alt="dogs & cats welcome"> <br>
+	 <img class="welcomeImg" src="../images/welcomeImg.png" alt="dogs & cats welcome"> <br>
 	<button class="logInBtn">Iniciar sesión</button>
 
 	<ul>
 		<li>Publica y encuentra a tus mascotas perdidas</li>
 		<li>Localiza al mejor adoptante</li>
 		<li>Descubre a tu mascota ideal</li>
-	</ul> -->
+	</ul> 
 <!--</section> -->
 
 <!-- <section class="newUserPage"> -->
@@ -53,9 +42,54 @@
 		<label>Confirma tu contraseña:</label><br>
 		<input class="confirm newUser" type="password"><br> -->
 
-		<button onclick="register()" class="signInBtn">Registrate</button>
+		<button  class="signInBtn">Registrate</button>
 	</form>
 
+
+<p>Iniciar Sesión</p>
+	<form>
+		<label>Email:</label><br>
+		<input class="email2" type="text"><br>
+		<label>Contraseña:</label><br>
+		<input class="password2" type="password"><br>
+		<!--
+		<label>Confirma tu contraseña:</label><br>
+		<input class="confirm newUser" type="password"><br> -->
+
+		<button  class="logInBtn">Inicia</button>
+	</form>
+
+	<div id="content">
+
+	</div>
+
+
+<div class="userInfo">
+	<h1>Agregar usuarios</h1>
+	<label>Nombre:</label>
+	<input class="name" type="text" placeholder="Nombre"><br>
+	<label>Apellido:</label>
+	<input class="lastname" type="text" placeholder="Apellido"><br>
+	<label>Fecha de nacimiento:</label>
+	<input class="dob" type="text" placeholder="Fecha de nacimiento"><br>
+	<button class="saveBtn">Guardar</button>
+
+
+<table class="table w3-striped">
+  <thead class="dark">
+    <tr>
+      <th scope="col">Id</th>
+      <th scope="col">Nombre</th>
+      <th scope="col">Apellido</th>
+      <th scope="col">Fecha de Nacimiento</th>
+    </tr>
+  </thead>
+  <tbody class="table"> 
+  </tbody>
+</table>
+
+
+</div>
 
 </section>
 
@@ -63,6 +97,26 @@
 <footer>
 	<a href="#" class="aboutUs"><p>¿Quienes somos?</p></a>
 </footer>
+</main>
+<script src="https://www.gstatic.com/firebasejs/5.7.1/firebase-app.js"></script>
+<script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
+ <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase.js"></script>
+ <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+ <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g=" crossorigin="anonymous"> </script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+
+<!--Firestore -->
+<script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
+<script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-firestore.js"></script>
+
+
+<!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS 
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script> -->
+
+<script src = "data.js"></script>
 <script src="main.js"></script>
 </body>
 </html>
